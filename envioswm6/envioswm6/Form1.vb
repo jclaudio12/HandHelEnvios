@@ -8295,12 +8295,54 @@ Public Class Form1
         Try
             ' Instantiate a connection for given Bluetooth(R) MAC Address.
             Dim thePrinterConn As ZebraPrinterConnection = New BluetoothPrinterConnection(theBtMacAddress)
-
             ' Open the connection - physical connection is established here.
+            coordenada = 10
+            nombre_empresa = ""
+            NOMBRE_BOLETA = ""
+            unidades.Text = ""
+            ENC = ""
+            If Empresa.Text = "1" Then
+                nombre_empresa = "VISTA PREVIA"
+            ElseIf Empresa.Text = "6326" Then
+                nombre_empresa = "TIKINDUSTRIAS, S. A."
+            Else
+                If Empresa.Text = "6327" Then
+                    nombre_empresa = "PALMA SUR, S. A."
+                End If
+            End If
+            If tipot.Text = "L" And cole_mal.Text.Length >= "1" Then
+                NOMBRE_BOLETA = "NOTA DE ENVIO DE CAÑA MALETEADA (COLERA)"
+                unidades.Text = "MALETAS"
+            ElseIf tipot.Text = "M" And cole_meca.Text.Length >= "1" Then
+                NOMBRE_BOLETA = "NOTA DE ENVIO DE CAÑA MECANIZADA(COLERA)"
+                unidades.Text = "CARRETAS"
+            Else
+                If tipot.Text = "C" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA A GRANEL (COLERA)"
+                    unidades.Text = "UNADAS"
+                ElseIf tipot.Text = "G" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA A GRANEL"
+                    unidades.Text = "UNADAS"
+                ElseIf tipot.Text = "M" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA COSECHA MECANIZADA"
+                    unidades.Text = "CARRETAS"
+                ElseIf tipot.Text = "L" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA MALETEADA"
+                    unidades.Text = "MALETAS"
+                ElseIf tipot.Text = "T" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA TRAMEADO"
+                    unidades.Text = "MALETAS"
+                ElseIf tipot.Text = "U" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE PALMA AFRICANA A FABRICA"
+                    unidades.Text = "CANASTAS"
+                ElseIf tipot.Text = "V" Then
+                    NOMBRE_BOLETA = "NOTA DE ENVIO DE PALMA AFRICANA A VENTA"
+                    unidades.Text = "RACIMOS"
+                End If
+            End If
             thePrinterConn.Open()
-
-            Dim cpclLabel As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10 EPSA" & vbCrLf & "PRINT" & vbCrLf)
-            Dim cpclLabe2 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10 EPSA 2" & vbCrLf & "PRINT" & vbCrLf)
+            Dim cpclLabel As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & nombre_empresa & vbCrLf & "PRINT" & vbCrLf)
+            Dim cpclLabe2 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & NOMBRE_BOLETA& vbCrLf & "PRINT" & vbCrLf)
 
             thePrinterConn.Write(cpclLabel, 0, cpclLabel.Length)
             thePrinterConn.Write(cpclLabe2, 0, cpclLabe2.Length)
