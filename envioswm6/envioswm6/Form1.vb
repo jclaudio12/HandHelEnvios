@@ -8342,7 +8342,7 @@ Public Class Form1
             End If
             thePrinterConn.Open()
             Dim cpclLabel As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & nombre_empresa & vbCrLf & "PRINT" & vbCrLf)
-            Dim cpclLabe2 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & NOMBRE_BOLETA& vbCrLf & "PRINT" & vbCrLf)
+            Dim cpclLabe2 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & NOMBRE_BOLETA & vbCrLf & "PRINT" & vbCrLf)
 
             thePrinterConn.Write(cpclLabel, 0, cpclLabel.Length)
             thePrinterConn.Write(cpclLabe2, 0, cpclLabe2.Length)
