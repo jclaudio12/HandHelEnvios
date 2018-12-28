@@ -1,0 +1,484 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+envioswm6
+</name>
+</assembly>
+<members>
+<member name="T:envioswm6.bitacoraDS.TB_DETALLE_TURNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.bitacoraDS.TB_TURNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.bitacoraDS.TB_DETALLE_TURNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.bitacoraDS.TB_TURNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.bitacoraDS.TB_DETALLE_TURNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.bitacoraDS.TB_TURNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.bitacoraDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:envioswm6.bitacoraDSTableAdapters.TB_DETALLE_TURNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.bitacoraDSTableAdapters.TB_TURNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.validaDS.TB_USUARIOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.validaDS.TB_USUARIOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.validaDS.TB_USUARIOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.validaDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:envioswm6.validaDSTableAdapters.TB_USUARIOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="P:envioswm6.My.Resources.Resources.ResourceManager">
+	<summary>
+   Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:envioswm6.My.Resources.Resources.Culture">
+	<summary>
+   Overrides the current thread's CurrentUICulture property for all
+   resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:envioswm6.My.Resources.Resources">
+	<summary>
+   A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:envioswm6.Form1.Button3_Click(System.Object,System.EventArgs)">
+	<summary>
+  boton de seleccion caña en forma de seleccion
+ </summary>
+</member><member name="M:envioswm6.Form1.Button2_Click(System.Object,System.EventArgs)">
+	<summary>
+ boton de seleccion de palma en forma seleccion
+ </summary>
+</member><member name="T:envioswm6.frentes.TB_FRENTESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.frentes.TB_FRENTESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.frentes.TB_FRENTESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.frentes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:envioswm6.frentesTableAdapters.TB_FRENTESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_DETALLE_ENVIODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_ENVIOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_PARAMETROSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_USUARIOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_DETALLE_ENVIORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_ENVIOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_PARAMETROSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_USUARIOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_DETALLE_ENVIORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_ENVIOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_PARAMETROSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.enviosDS.TB_USUARIOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.enviosDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:envioswm6.enviosDSTableAdapters.TB_DETALLE_ENVIOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.enviosDSTableAdapters.TB_ENVIOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.enviosDSTableAdapters.TB_PARAMETROSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.enviosDSTableAdapters.TB_USUARIOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DS.TB_CATALOGO_LABORESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_CONTRATISTASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADES_X_EMPRESADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_FINCASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_FRENTESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABOR_EMPLEADOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABORES_AREADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LOTESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_MAQUINARIADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PANTESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PERSONALDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOS_TRANSPORTISTADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_RUTASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_TRANSPORTISTASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_VARIEDADESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.tb_vehiculosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_VEHICULOS_TRANSPORTISTADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_CATALOGO_LABORESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_CONTRATISTASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADES_X_EMPRESARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_FINCASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_FRENTESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABOR_EMPLEADOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABORES_AREARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_LOTESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_MAQUINARIARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PANTESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PERSONALRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOS_TRANSPORTISTARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_RUTASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_TRANSPORTISTASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_VARIEDADESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.tb_vehiculosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_VEHICULOS_TRANSPORTISTARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:envioswm6.DS.TB_CATALOGO_LABORESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_CONTRATISTASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_ENTIDADES_X_EMPRESARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_FINCASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_FRENTESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABOR_EMPLEADOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_LABORES_AREARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_LOTESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_MAQUINARIARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_PANTESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_PERSONALRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_PILOTOS_TRANSPORTISTARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_RUTASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_TRANSPORTISTASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_VARIEDADESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.tb_vehiculosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS.TB_VEHICULOS_TRANSPORTISTARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:envioswm6.DS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_CATALOGO_LABORESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_CONTRATISTASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_ENTIDADESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_ENTIDADES_X_EMPRESATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_FINCASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_FRENTESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_LABOR_EMPLEADOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_LABORES_AREATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_LOTESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_MAQUINARIATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_PANTESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_PERSONALTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_PILOTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_PILOTOS_TRANSPORTISTATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_RUTASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_TRANSPORTISTASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_VARIEDADESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.tb_vehiculosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:envioswm6.DSTableAdapters.TB_VEHICULOS_TRANSPORTISTATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+</members>
+</doc>

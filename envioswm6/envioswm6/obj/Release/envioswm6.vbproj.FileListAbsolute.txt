@@ -1,0 +1,258 @@
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 06-12-2012\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\Copia de 25-01-2012\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\a\Documents\Visual Studio 2008\Projects\backup_envios\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\25-01-2013\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\SOFTWARE\PILAR\ENVIOS\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+D:\Formas\handheld\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\jlgarcia\Documents\Visual Studio 2008\Projects\Pilar\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\Envios\Normal\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\eperez\Documents\Visual Studio 2008\Projects\Pilar\Envios_2018\02-10-2018-pequeña\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\bitacora.sdf
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\campo.sdf
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\envios.sdf
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\valida.sdf
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\envioswm6.exe
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\envioswm6.pdb
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\envioswm6.xml
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\Sega.WindowsMobile.GPS.dll
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.Form1.resources
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.Resources.resources
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.exe
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.xml
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\obj\Release\envioswm6.pdb
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\InTheHand.Net.Personal.dll
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\ZSDK_API.dll
+C:\Users\jclaudio\Documents\Visual Studio 2008\Projects\Pilar\02-10-2018-pequeña_depurada\9900\envioswm6\envioswm6\bin\Release\ZebraBluetoothAdapter.dll

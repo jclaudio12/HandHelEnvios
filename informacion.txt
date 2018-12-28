@@ -1,0 +1,8 @@
+se agrego campo y contratista en trama
+y reporte impreso de los envios
+particulares y maleteros.
+
+
+y
+
+reporte de turnos envios, fechas y transportista-vehiculo.

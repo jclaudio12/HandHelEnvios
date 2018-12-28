@@ -1,0 +1,14 @@
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\envioswm6.exe
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\envioswm6.pdb
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\envioswm6.xml
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\Sega.WindowsMobile.GPS.dll
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.Form1.resources
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.Resources.resources
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.vbproj.GenerateResource.Cache
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.exe
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.xml
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\obj\Debug\envioswm6.pdb
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\campo.sdf
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\envios.sdf
+C:\Users\rescobar\Documents\Visual Studio 2008\Projects\envioswm6\envioswm6\bin\Debug\valida.sdf
