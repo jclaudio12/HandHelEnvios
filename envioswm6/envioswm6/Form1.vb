@@ -8483,7 +8483,6 @@ Public Class Form1
             'coordenada = coordenada + 70
             'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
             If Empresa.Text = "6327" Then
-                'coordenada = coordenada + 70
                 ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
 
             ElseIf Empresa.Text = "6326" Then
@@ -8493,25 +8492,16 @@ Public Class Form1
                 coordenada = coordenada + 70
                 ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                         SERIE: " & serie_preparada & "|"
             End If
-            'coordenada = coordenada + 70
-            'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|ENVIO NO.:   " & Lpad(NUMERO_REP, "0", 6) & "|"
-            'ENC &= "}" & "{AHEAD:12}" & "{LP}"
-            'BTPRINT.Write(ENC)
+
+
             Dim v_envio_no = Lpad(NUMERO_REP, "0", 6)
-
-            coordenada = 10
-            'IMP = Chr(27) & "EZ" & "{PRINT:" & "@" & coordenada & ",50:MF204,VMULT1 |FECHA:       " & Now.ToString("dd/MM/yyyy HH:mm") & "|"
-
-
-
-            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 600 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & vbCrLf & "T 5 0 300 130" & Now.ToString("dd/MM/yyyy HH:mm") & vbCrLf & "T 5 0 1 160 FINCA: " & vbCrLf & "T 5 0 100 160" & Lpad(Id_finca.Text, "0", 3) & vbCrLf & "T 5 0 200 160" & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
-
-
+            fecha_env = Now.Date
+            Dim v_id_finca = Lpad(Id_finca.Text, "0", 3)
+            'Impresion de los datos encabezado empresa, nota de envio, numero envio, serie, fecha y finca.
+            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 300 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & fecha_env & vbCrLf & "T 5 0 1 160 FINCA: " & v_id_finca & vbCrLf & "T 5 0 200 160" & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
             thePrinterConn.Write(encabezado, 0, encabezado.Length)
 
-            'coordenada = coordenada + 30
-            ' IMP &= "@" & coordenada & ",50:MF204,VMULT1 |FINCA:       " & Lpad(Id_finca.Text, "0", 3) & "  " & Nombre_finca.Text & "|"
-            ' coordenada = coordenada + 30
+
 
 
             If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
@@ -8523,7 +8513,11 @@ Public Class Form1
                 coordenada = coordenada + 30
                 IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "|" '"  " & nombre_pilo &
                 coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|" '"  " & placa_vehi & 
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|" '"  " & placa_vehi &
+                Dim seccion_1 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 200 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "LEFT" & "T 5 0 1 190 CROQUIS: " & vbCrLf & "PRINT" & vbCrLf)
+                thePrinterConn.Write(seccion_1, 0, seccion_1.Length)
+                Thread.Sleep(500)
+                thePrinterConn.Close()
             Else
                 IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "  " & nombre_trans & "|"
                 coordenada = coordenada + 30
