@@ -8504,7 +8504,7 @@ Public Class Form1
 
 
 
-            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 600 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & vbCrLf & "T 5 0 300 130" & Now.ToString("dd/MM/yyyy HH:mm") & vbCrLf & "T 5 0 1 160 FINCA: " & Lpad(Id_finca.Text, "0", 3) & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
+            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 600 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & vbCrLf & "T 5 0 300 130" & Now.ToString("dd/MM/yyyy HH:mm") & vbCrLf & "T 5 0 1 160 FINCA: " & vbCrLf & "T 5 0 100 160" & Lpad(Id_finca.Text, "0", 3) & vbCrLf & "T 5 0 200 160" & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
 
 
             thePrinterConn.Write(encabezado, 0, encabezado.Length)
