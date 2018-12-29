@@ -3288,7 +3288,7 @@ Public Class Form1
         Dim comparab As String = ""
         Dim posmas As Integer = 0
         Dim coincidencia As Integer = 0
-        countpos = Convert.ToInt32(posi.Text)
+        countpos = Convert.ToInt32(posi.Text) '?
         posmas = countpos
         If ((tipot.Text = "C") Or (tipot.Text = "G")) Then
             If Filas.Text <> "" And posi.Text <> "" And corta.Text <> "" And racimo.Text <> "" And fecha_corte.Text <> "" And equivalencia.Text <> "" Then
@@ -7774,6 +7774,7 @@ Public Class Form1
                 End If
             End If
             ENC = Chr(27) & "EZ" & "{PRINT:" & "@" & coordenada & ",250:MF107,VMULT2|" & nombre_empresa & "|"
+
             coordenada = coordenada + 70
             ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
             If Empresa.Text = "6327" Then
@@ -8292,10 +8293,147 @@ Public Class Form1
     End Sub
 
     Private Sub f_imp_previa(ByVal theBtMacAddress As [String])
+        numero_reporte()
+        If ((tipot.Text = "G") Or (tipot.Text = "C")) Then
+            cuenta_unadas()
+        ElseIf ((tipot.Text = "M") Or (tipot.Text = "L")) Then
+            cuenta_carretas()
+        End If
+        v_previa = 1
+        Generar.Enabled = True
+        Generar.Visible = True
+        'datos de impresion
+        Dim RESPUESTA As MsgBoxResult = Nothing
+        Dim contador_generar As Integer = 0
+        Dim espera As Long = 0
+        TOTAL_SACOS = 0
+        fecha_env = Now.ToString("yyyyMMdd HH:mm")
+        Generado.Text = ""
+        detallegc = ""
+
         Try
-            ' Instantiate a connection for given Bluetooth(R) MAC Address.
+            If Not position Is Nothing Then
+                txtResult.Text = position.EnCerca(txtLon1.Text, txtLat1.Text, txtLon2.Text, txtLat2.Text, txtLon3.Text, txtLat3.Text, TxtLon4.Text, TxtLat4.Text).ToString
+            End If
+        Catch EX As Exception
+            MsgBox("Error producido por gps " & EX.Message & vbCrLf, Nothing, "Error")
+        End Try
+        If tipot.Text <> "U" And tipot.Text <> "V" Then
+            zona.Text = Lizona.Items.Item(Lizona.SelectedIndex)
+            If txtLote.Text.Length < 0 Then
+                lote1 = ""
+            Else
+                lote1 = txtLote.Text
+            End If
+            'If lilo1.SelectedIndex < 0 Then
+            'lote1 = ""
+            'Else
+            '   lote1 = lilo1.Items.Item(lilo1.SelectedIndex).ToString()
+            'End If
+            If lilo2.SelectedIndex < 0 Then
+                lote2 = ""
+            Else
+                lote2 = lilo2.Items.Item(lilo2.SelectedIndex).ToString()
+            End If
+            If lilo3.SelectedIndex < 0 Then
+                lote3 = ""
+            Else
+                lote3 = lilo3.Items.Item(lilo3.SelectedIndex).ToString()
+            End If
+            If lilo4.SelectedIndex < 0 Then
+                lote4 = ""
+            Else
+                lote4 = lilo4.Items.Item(lilo4.SelectedIndex).ToString()
+            End If
+            If lilo5.SelectedIndex < 0 Then
+                lote5 = ""
+            Else
+                lote5 = lilo5.Items.Item(lilo5.SelectedIndex).ToString()
+            End If
+            If lilo6.SelectedIndex < 0 Then
+                lote6 = ""
+            Else
+                lote6 = lilo6.Items.Item(lilo6.SelectedIndex).ToString()
+            End If
+            If txtPante.Text.Length < 0 Then
+                pante1 = ""
+            Else
+                pante1 = txtPante.Text
+            End If
+            'If lipa1.SelectedIndex < 0 Then
+            'pante1 = ""
+            'Else
+            '   pante1 = lipa1.Items.Item(lipa1.SelectedIndex).ToString()
+            'End If
+            If lipa2.SelectedIndex < 0 Then
+                pante2 = ""
+            Else
+                pante2 = lipa2.Items.Item(lipa2.SelectedIndex).ToString()
+            End If
+            If lipa3.SelectedIndex < 0 Then
+                pante3 = ""
+            Else
+                pante3 = lipa3.Items.Item(lipa3.SelectedIndex).ToString()
+            End If
+            If lipa4.SelectedIndex < 0 Then
+                pante4 = ""
+            Else
+                pante4 = lipa4.Items.Item(lipa4.SelectedIndex).ToString()
+            End If
+            If lipa5.SelectedIndex < 0 Then
+                pante5 = ""
+            Else
+                pante5 = lipa5.Items.Item(lipa5.SelectedIndex).ToString()
+            End If
+            If lipa6.SelectedIndex < 0 Then
+                pante6 = ""
+            Else
+                pante6 = lipa6.Items.Item(lipa6.SelectedIndex).ToString()
+            End If
+        End If
+        If presenta.Checked Then
+            presentacion = "Q"
+        Else
+            presentacion = "C"
+        End If
+
+        If ((tipot.Text = "C") Or (tipot.Text = "G") Or (tipot.Text = "L")) Then 'ticket = boleta de transporte'
+            If detallet.TextLength > 0 Then
+                salto = Convert.ToInt32(detallet.TextLength / 35)
+                While contador_generar < salto
+                    Dim linea As String = ""
+                    linea = detallet.Text.Substring(contador_generar * 35, 35) 'comparab = detalle.Text.Substring(CONTADOR * 35, 35)
+                    detallegc = detallegc + Lpad(linea.Substring(0, 3), "0", 3) + Lpad(linea.Substring(3, 3), "0", 3) + Lpad(linea.Substring(6, 6), "0", 6) + Lpad(linea.Substring(12, 3), "0", 3) + Lpad(linea.Substring(15, 8), "0", 8) + Lpad(linea.Substring(23, 6), "0", 6).ToUpper + Lpad(linea.Substring(29, 6), "0", 6).ToUpper
+                    contador_generar = contador_generar + 1
+                End While
+            End If
+            ''--------------------
+            'If trato.Checked = True Then
+            '    Generado.Text = Replace(Lpad(txtLatitud.Text, "0", 12), Chr(39), "!") + Replace(Lpad(txtLongitud.Text, "0", 12), Chr(39), "!") + Replace(Lpad(txtResult.Text.Substring(0, 1), "0", 2), Chr(39), "!") + Lpad(Empresa.Text, "0", 4) + Lpad(serie_preparada, "0", 4) + Lpad(NUMERO_REP, "0", 6) + Now.ToString("ddMMyyyyHHmm") + Lpad(Id_finca.Text, "0", 4) + Lpad(Id_Frente.Text, "0", 4) + Lpad(trans.Text, "0", 4) + Lpad(vehi.Text, "0", 3) + Lpad(pilo.Text, "0", 3) + Lpad(plata.Text, "0", 3) + Lpad(contraid.Text, "0", 4) + Lpad(ENV.Text, "0", 6) + Lpad(lote1, "0", 3) + Lpad(lote2, "0", 3) + Lpad(lote3, "0", 3) + Lpad(lote4, "0", 3) + Lpad(lote5, "0", 3) + Lpad(lote6, "0", 3) + Lpad(pante1, "0", 3) + Lpad(pante2, "0", 3) + Lpad(pante3, "0", 3) + Lpad(pante4, "0", 3) + Lpad(pante5, "0", 3) + Lpad(pante6, "0", 3) + Lpad(unidad.Text, "0", 3) + Lpad(unidad2.Text, "0", 3) + Lpad(unidad3.Text, "0", 3) + Lpad(unidad4.Text, "0", 3) + Lpad(unidad5.Text, "0", 3) + Lpad(unidad6.Text, "0", 3) + Lpad(fe_quema.Text, "0", 8) + Lpad(quema2.Text, "0", 8) + Lpad(quema3.Text, "0", 8) + Lpad(quema4.Text, "0", 8) + Lpad(quema5.Text, "0", 8) + Lpad(quema6.Text, "0", 8) + Lpad(Ho_quema.Text, "0", 4) + Lpad(hora2.Text, "0", 4) + Lpad(hora3.Text, "0", 4) + Lpad(hora4.Text, "0", 4) + Lpad(hora5.Text, "0", 4) + Lpad(hora6.Text, "0", 4) + Lpad(Now.ToString("HHmm"), "0", 4) + Lpad(grupo.Text, "0", 3).ToUpper + Lpad(Id_ticket.Text, "0", 6) + Lpad(zona.Text, "0", 2) + Lpad(cole.Text, "0", 3) + Lpad(ALZ.Text, "0", 6) + Lpad(TRA.Text, "0", 6) + Lpad(OPA.Text, "0", 6) + Lpad(OPT.Text, "0", 6) + Lpad(ruta.Text, "0", 3) + Lpad(fecturno.Text, "0", 12) + Lpad(presentacion, "0", 2) + Lpad(fecha_corte.Text, "0", 8) + Lpad(ocorte.Text, "0", 8) + Lpad(Croquis.Text, "0", 8) + detallegc
+            'Else
+            '    Generado.Text = Replace(Lpad(txtLatitud.Text, "0", 12), Chr(39), "!") + Replace(Lpad(txtLongitud.Text, "0", 12), Chr(39), "!") + Replace(Lpad(txtResult.Text.Substring(0, 1), "0", 2), Chr(39), "!") + Lpad(Empresa.Text, "0", 4) + Lpad(serie_preparada, "0", 4) + Lpad(NUMERO_REP, "0", 6) + Now.ToString("ddMMyyyyHHmm") + Lpad(Id_finca.Text, "0", 4) + Lpad(Id_Frente.Text, "0", 4) + Lpad(trans.Text, "0", 4) + Lpad(vehi.Text, "0", 3) + Lpad(pilo.Text, "0", 3) + Lpad(plata.Text, "0", 3) + Lpad(contraid.Text, "0", 4) + Lpad(ENV.Text, "0", 6) + Lpad(lote1, "0", 3) + Lpad(lote2, "0", 3) + Lpad(lote3, "0", 3) + Lpad(lote4, "0", 3) + Lpad(lote5, "0", 3) + Lpad(lote6, "0", 3) + Lpad(pante1, "0", 3) + Lpad(pante2, "0", 3) + Lpad(pante3, "0", 3) + Lpad(pante4, "0", 3) + Lpad(pante5, "0", 3) + Lpad(pante6, "0", 3) + Lpad(unidad.Text, "0", 3) + Lpad(unidad2.Text, "0", 3) + Lpad(unidad3.Text, "0", 3) + Lpad(unidad4.Text, "0", 3) + Lpad(unidad5.Text, "0", 3) + Lpad(unidad6.Text, "0", 3) + Lpad(fe_quema.Text, "0", 8) + Lpad(quema2.Text, "0", 8) + Lpad(quema3.Text, "0", 8) + Lpad(quema4.Text, "0", 8) + Lpad(quema5.Text, "0", 8) + Lpad(quema6.Text, "0", 8) + Lpad(Ho_quema.Text, "0", 4) + Lpad(hora2.Text, "0", 4) + Lpad(hora3.Text, "0", 4) + Lpad(hora4.Text, "0", 4) + Lpad(hora5.Text, "0", 4) + Lpad(hora6.Text, "0", 4) + Lpad(Now.ToString("HHmm"), "0", 4) + Lpad(grupo.Text, "0", 3).ToUpper + Lpad(Id_ticket.Text, "0", 6) + Lpad(zona.Text, "0", 2) + Lpad(cole.Text, "0", 3) + Lpad(ALZ.Text, "0", 6) + Lpad(TRA.Text, "0", 6) + Lpad(OPA.Text, "0", 6) + Lpad(OPT.Text, "0", 6) + Lpad(ruta.Text, "0", 3) + Lpad(fecturno.Text, "0", 12) + Lpad(presentacion, "0", 2) + Lpad(fecha_corte.Text, "0", 8) + Lpad(ocorte.Text, "0", 8) + Lpad(Croquis.Text, "0", 8) + detallegc
+            '    'Dim otro As Integer = Generado.TextLength
+            '    'otro = otro
+            'End If
+
+        ElseIf (tipot.Text = "L") Then
+            If flete = "P" Then
+                texto = "PROPIO"
+            Else
+                texto = "FLETERO"
+            End If
+        End If
+        If BTPRINT.IsOpen Then
+            BTPRINT.Close()
+        End If
+
+        Try
+            'BTPRINT.Open() jclaudio coment
+            'BTPRINT.WriteTimeout = 90000 jclaudio coment
+            'BTPRINT.WriteTimeout = System.IO.Ports.SerialPort.InfiniteTimeout 'serial.InfiniteTimeout
             Dim thePrinterConn As ZebraPrinterConnection = New BluetoothPrinterConnection(theBtMacAddress)
-            ' Open the connection - physical connection is established here.
+            thePrinterConn.Open()
+
             coordenada = 10
             nombre_empresa = ""
             NOMBRE_BOLETA = ""
@@ -8340,17 +8478,537 @@ Public Class Form1
                     unidades.Text = "RACIMOS"
                 End If
             End If
-            thePrinterConn.Open()
-            Dim cpclLabel As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & nombre_empresa & vbCrLf & "PRINT" & vbCrLf)
-            Dim cpclLabe2 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 20 1" & vbCrLf & "ON-FEED IGNORE" & vbCrLf & "T 0 1 20 10" & NOMBRE_BOLETA & vbCrLf & "PRINT" & vbCrLf)
 
-            thePrinterConn.Write(cpclLabel, 0, cpclLabel.Length)
-            thePrinterConn.Write(cpclLabe2, 0, cpclLabe2.Length)
-            Thread.Sleep(500)
-            thePrinterConn.Close()
+            'ENC = Chr(27) & "EZ" & "{PRINT:" & "@" & coordenada & ",250:MF107,VMULT2|" & nombre_empresa & "|"
+            'coordenada = coordenada + 70
+            'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
+            If Empresa.Text = "6327" Then
+                'coordenada = coordenada + 70
+                ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
+
+            ElseIf Empresa.Text = "6326" Then
+                coordenada = coordenada + 70
+                ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
+            Else
+                coordenada = coordenada + 70
+                ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                         SERIE: " & serie_preparada & "|"
+            End If
+            'coordenada = coordenada + 70
+            'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|ENVIO NO.:   " & Lpad(NUMERO_REP, "0", 6) & "|"
+            'ENC &= "}" & "{AHEAD:12}" & "{LP}"
+            'BTPRINT.Write(ENC)
+            Dim v_envio_no = Lpad(NUMERO_REP, "0", 6)
+
+            coordenada = 10
+            'IMP = Chr(27) & "EZ" & "{PRINT:" & "@" & coordenada & ",50:MF204,VMULT1 |FECHA:       " & Now.ToString("dd/MM/yyyy HH:mm") & "|"
+
+
+
+            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 600 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & vbCrLf & "T 5 0 300 130" & Now.ToString("dd/MM/yyyy HH:mm") & vbCrLf & "T 5 0 1 160 FINCA: " & Lpad(Id_finca.Text, "0", 3) & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
+
+
+            thePrinterConn.Write(encabezado, 0, encabezado.Length)
+
+            'coordenada = coordenada + 30
+            ' IMP &= "@" & coordenada & ",50:MF204,VMULT1 |FINCA:       " & Lpad(Id_finca.Text, "0", 3) & "  " & Nombre_finca.Text & "|"
+            ' coordenada = coordenada + 30
+
+
+            If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CROQUIS:                 " + SerieCroquis.Text + "   " & Lpad(Croquis.Text, "0", 8) & "|" '"  " & nombre_trans & 
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ORDEN CORTE:             " & Lpad(ocorte.Text, "0", 8) & "|" '"  " & nombre_trans & 
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "|" '"  " & nombre_trans & 
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "|" '"  " & nombre_pilo &
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|" '"  " & placa_vehi & 
+            Else
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "  " & nombre_trans & "|"
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "  " & nombre_pilo & "|" '
+                coordenada = coordenada + 30
+                If (tipot.Text = "T" Or tipot.Text = "L") Then
+                    If (p_placa.Length > 1) Then
+                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + p_placa + "|"
+                    Else
+                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + txtPLaca.Text + "|"
+                    End If
+                Else
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|"
+                End If
+                coordenada = coordenada + 30
+                If ((tipot.Text = "T") Or (tipot.Text = "L")) Then
+                    If (Manual.CheckState = Windows.Forms.CheckState.Checked) Then
+                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |Placa Manual |"
+                    Else
+                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |STICKER |"
+                    End If
+                End If
+            End If
+            If (tipot.Text <> "U") And (tipot.Text <> "V") Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204,VMULT1 |FRENTE:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+                If (tipot.Text <> "T") Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BOLETA DE TRANSPORTE:    " & Lpad(Nboleta.Text, "0", 6) & "|"
+                End If
+            Else
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204,VMULT1 |SECTOR:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+            End If
+            If (tipot.Text <> "U") And (tipot.Text <> "V") Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |RUTA:                    " & Lpad(id_ruta.Text, "0", 3) & "|"
+            End If
+            If (tipot.Text <> "T") Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PLATAFORMA:              " & Lpad(plata.Text, "0", 4) & "|"
+            End If
+            If ((tipot.Text = "C") Or (tipot.Text = "G") Or (tipot.Text = "M") Or (tipot.Text = "L")) Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |COLERA:                  " & Lpad(cole.Text, "0", 4) & "|"
+            End If
+            If ((tipot.Text <> "M") And (tipot.Text <> "T") And (tipot.Text <> "L")) Then
+                If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                Else
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                End If
+            End If
+            If (tipot.Text = "T") Then
+                If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                Else
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                End If
+            End If
+            If (tipot.Text = "L") Then
+                If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                Else
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                End If
+            End If
+            coordenada = coordenada + 30
+            IMP &= "@" & coordenada & ",50:MF204, VMULT1 |HORA DE DESPACHO:        " & TimeOfDay.ToString("HH:mm") & "|"
+            'If (tipo <> "U") Then
+            coordenada = coordenada + 30
+            If (tipot.Text <> "U") And (tipot.Text <> "T") And (tipot.Text <> "V") Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TURNO:                   " & grupo.Text & "|"
+            ElseIf tipot.Text = "T" Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CUADRILLA:               " & grupo.Text & "|"
+            Else
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |GRUPO:                   " & grupo.Text & "|"
+            End If
+            If tipot.Text = "V" Or tipot.Text = "U" Then
+                Dim DATO As DateTime = Now
+                Dim CONN = New SqlCeConnection("Data Source = " & DirectorioDeAplicacion & NombreBaseDeDatos)
+                Dim QUERY = New SqlCeCommand()
+                Dim dr As SqlCeDataReader = Nothing
+
+                QUERY = New SqlCeCommand("SELECT FECHA_SIEMBRA FROM TB_LOTES WHERE ID_FINCA =  " & Id_finca.Text & " AND ID_PANTE = " & Id_Frente.Text & " AND ID_LOTE = " & lipa1.Items.Item(lipa1.SelectedIndex) & " ;", CONN)
+                Try
+                    If CONN.State = Data.ConnectionState.Open Then
+                        CONN.Close()
+                    Else
+                        CONN.Open()
+                    End If
+                    dr = QUERY.ExecuteReader()
+                    While dr.Read()
+                        DATO = Convert.ToDateTime(dr(0).ToString)
+                    End While
+                Catch ex As Exception
+                    MsgBox("Error ocasionado por 21 " & ex.Message & vbCrLf & _
+                                "Favor de reportarlo.")
+                End Try
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PERIODO SIEMBRA:        " & DATO.ToString("yyyy") & "|"
+            End If
+            If ((tipot.Text = "C") Or (tipot.Text = "G")) Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ALZADOR:                 " & Lpad(ALZ.Text, "0", 3) & "     OPERADOR ALZADOR " & Lpad(OPA.Text, "0", 6) & "|"
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRACTOR:                 " & Lpad(TRA.Text, "0", 3) & "     OPERADOR TRACTOR " & Lpad(OPT.Text, "0", 6) & "|"
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FECHA TURNO:                 " & Lpad(fecturno.Text.Substring(0, 2), "0", 2) & "/" & Lpad(fecturno.Text.Substring(2, 2), "0", 2) & "/" & Lpad(fecturno.Text.Substring(4, 4), "0", 4) & "|"
+            End If
+            coordenada = coordenada + 30
+            total_unidades = 0
+            If unidad.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad.Text)
+            End If
+            If unidad2.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad2.Text)
+            End If
+            If unidad3.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad3.Text)
+            End If
+            If unidad4.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad4.Text)
+            End If
+            If unidad5.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad5.Text)
+            End If
+            If unidad6.Text = "" Then
+                total_unidades = total_unidades + 0
+            Else
+                total_unidades = total_unidades + Convert.ToInt32(unidad6.Text)
+            End If
+            'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & UNIDADES & ":        " & total_unidades & "|"
+
+            If (tipot.Text <> "U") And (tipot.Text <> "V") Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PRESENTACION:                 " & Lpad(presentacion, "0", 1) & "|"
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |     LOTE           FECH QUEMA      HORA QUEMA      " & unidades.Text & "|"
+            Else
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BLOQUE    VARIEDAD  FECH CORTE      HORA CORTE      " & unidades.Text & "|"
+            End If
+            fechaq1 = Lpad(fe_quema.Text, "0", 8)
+            fechaq2 = Lpad(quema2.Text, "0", 8)
+            fechaq3 = Lpad(quema3.Text, "0", 8)
+            fechaq4 = Lpad(quema4.Text, "0", 8)
+            fechaq5 = Lpad(quema5.Text, "0", 8)
+            fechaq6 = Lpad(quema6.Text, "0", 8)
+            horaq1 = Lpad(Ho_quema.Text, "0", 4)
+            horaq2 = Lpad(hora2.Text, "0", 4)
+            horaq3 = Lpad(hora3.Text, "0", 4)
+            horaq4 = Lpad(hora4.Text, "0", 4)
+            horaq5 = Lpad(hora5.Text, "0", 4)
+            horaq6 = Lpad(hora6.Text, "0", 4)
+
+            If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
+                SumaRacimo.Text = total_deta_u
+                SumaCarreta.Text = total_deta_c
+                coordenada = coordenada + 30
+                If ((tipot.Text = "G") Or (tipot.Text = "C")) Then
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & "       " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(SumaRacimo.Text, "0", 3) & "|"
+                ElseIf (tipot.Text = "M") Then
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & "       " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(SumaCarreta.Text, "0", 3) & "|"
+                ElseIf (tipot.Text = "L") Then
+                    'IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & "       " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(cortadores.Text, "0", 3) & "|"
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & "       " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(unidad.Text, "0", 3) & "|"
+                Else
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & "       " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(unidad.Text, "0", 3) & "|"
+                End If
+                If lote2.Length > 0 Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante2, "0", 3) & "       " & Lpad(lote2, "0", 3) & "       " & fechaq2.Substring(0, 2) & "/" & fechaq2.Substring(2, 2) & "/" & fechaq2.Substring(4, 4) & "        " & horaq2.Substring(0, 2) & ":" & horaq2.Substring(2, 2) & "         " & Lpad(unidad2.Text, "0", 3) & "|"
+                End If
+                If lote3.Length > 0 Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante3, "0", 3) & "       " & Lpad(lote3, "0", 3) & "       " & fechaq3.Substring(0, 2) & "/" & fechaq3.Substring(2, 2) & "/" & fechaq3.Substring(4, 4) & "        " & horaq3.Substring(0, 2) & ":" & horaq3.Substring(2, 2) & "         " & Lpad(unidad3.Text, "0", 3) & "|"
+                End If
+                If lote4.Length > 0 Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante4, "0", 3) & "       " & Lpad(lote4, "0", 3) & "       " & fechaq4.Substring(0, 2) & "/" & fechaq4.Substring(2, 2) & "/" & fechaq4.Substring(4, 4) & "        " & horaq4.Substring(0, 2) & ":" & horaq4.Substring(2, 2) & "         " & Lpad(unidad4.Text, "0", 3) & "|"
+                End If
+                If lote5.Length > 0 Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante5, "0", 3) & "       " & Lpad(lote5, "0", 3) & "       " & fechaq5.Substring(0, 2) & "/" & fechaq5.Substring(2, 2) & "/" & fechaq5.Substring(4, 4) & "        " & horaq5.Substring(0, 2) & ":" & horaq5.Substring(2, 2) & "         " & Lpad(unidad5.Text, "0", 3) & "|"
+                End If
+                If lote6.Length > 0 Then
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante6, "0", 3) & "       " & Lpad(lote6, "0", 3) & "       " & fechaq6.Substring(0, 2) & "/" & fechaq6.Substring(2, 2) & "/" & fechaq6.Substring(4, 4) & "        " & horaq6.Substring(0, 2) & ":" & horaq6.Substring(2, 2) & "         " & Lpad(unidad6.Text, "0", 3) & "|"
+                End If
+            Else
+                Dim CONN2 = New SqlCeConnection("Data Source = " & DirectorioDeAplicacion & NombreBaseDeDatos)
+                Dim QUERY2 = New SqlCeCommand()
+                Dim dr As SqlCeDataReader = Nothing
+
+                QUERY2 = New SqlCeCommand("SELECT DESCRIPCION FROM TB_VARIEDADES WHERE ID_VARIEDAD =  " & lote1 & " ;", CONN2)
+                Try
+                    If CONN2.State = Data.ConnectionState.Open Then
+                        CONN2.Close()
+                    Else
+                        CONN2.Open()
+                    End If
+                    dr = QUERY2.ExecuteReader()
+                    While dr.Read()
+                        VARIEDAD_DESC = dr(0).ToString
+                    End While
+                Catch ex As Exception
+                    MsgBox("Error ocasionado por 22 " & ex.Message & vbCrLf & _
+                                "Favor de reportarlo.")
+                End Try
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante1, "0", 3) & "       " & Lpad(lote1, "0", 3) & " " & VARIEDAD_DESC & " " & fechaq1.Substring(0, 2) & "/" & fechaq1.Substring(2, 2) & "/" & fechaq1.Substring(4, 4) & "        " & horaq1.Substring(0, 2) & ":" & horaq1.Substring(2, 2) & "         " & Lpad(unidad.Text, "0", 3) & "|"
+                If lote2.Length > 0 Then
+                    QUERY2 = New SqlCeCommand("SELECT DESCRIPCION FROM TB_VARIEDADES WHERE ID_VARIEDAD =  " & lote2 & " ;", CONN2)
+                    Try
+                        If CONN2.State = Data.ConnectionState.Open Then
+                            CONN2.Close()
+                        Else
+                            CONN2.Open()
+                        End If
+                        dr = QUERY2.ExecuteReader()
+                        While dr.Read()
+                            VARIEDAD_DESC = dr(0).ToString
+                        End While
+                    Catch ex As Exception
+                        MsgBox("Error ocasionado por 23 " & ex.Message & vbCrLf & _
+                                    "Favor de reportarlo.")
+                    End Try
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante2, "0", 3) & "       " & Lpad(lote2, "0", 3) & " " & VARIEDAD_DESC & " " & fechaq2.Substring(0, 2) & "/" & fechaq2.Substring(2, 2) & "/" & fechaq2.Substring(4, 4) & "        " & horaq2.Substring(0, 2) & ":" & horaq2.Substring(2, 2) & "         " & Lpad(unidad2.Text, "0", 3) & "|"
+
+                End If
+                If lote3.Length > 0 Then
+                    QUERY2 = New SqlCeCommand("SELECT DESCRIPCION FROM TB_VARIEDADES WHERE ID_VARIEDAD =  " & lote2 & " ;", CONN2)
+                    Try
+                        If CONN2.State = Data.ConnectionState.Open Then
+                            CONN2.Close()
+                        Else
+                            CONN2.Open()
+                        End If
+                        dr = QUERY2.ExecuteReader()
+                        While dr.Read()
+                            VARIEDAD_DESC = dr(0).ToString
+                        End While
+                    Catch ex As Exception
+                        MsgBox("Error ocasionado por 24 " & ex.Message & vbCrLf & _
+                                    "Favor de reportarlo.")
+                    End Try
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante3, "0", 3) & "       " & Lpad(lote3, "0", 3) & " " & VARIEDAD_DESC & " " & fechaq3.Substring(0, 2) & "/" & fechaq3.Substring(2, 2) & "/" & fechaq3.Substring(4, 4) & "        " & horaq3.Substring(0, 2) & ":" & horaq3.Substring(2, 2) & "         " & Lpad(unidad3.Text, "0", 3) & "|"
+                End If
+                If lote4.Length > 0 Then
+                    QUERY2 = New SqlCeCommand("SELECT DESCRIPCION FROM TB_VARIEDADES WHERE ID_VARIEDAD =  " & lote2 & " ;", CONN2)
+                    Try
+                        If CONN2.State = Data.ConnectionState.Open Then
+                            CONN2.Close()
+                        Else
+                            CONN2.Open()
+                        End If
+                        dr = QUERY2.ExecuteReader()
+                        While dr.Read()
+                            VARIEDAD_DESC = dr(0).ToString
+                        End While
+                    Catch ex As Exception
+                        MsgBox("Error ocasionado por 25 " & ex.Message & vbCrLf & _
+                                    "Favor de reportarlo.")
+                    End Try
+                    coordenada = coordenada + 30
+                    IMP &= "@" & coordenada & ",50:MF204,VMULT1|" & Lpad(pante4, "0", 3) & "       " & Lpad(lote4, "0", 3) & " " & VARIEDAD_DESC & " " & fechaq4.Substring(0, 2) & "/" & fechaq4.Substring(2, 2) & "/" & fechaq4.Substring(4, 4) & "        " & horaq4.Substring(0, 2) & ":" & horaq4.Substring(2, 2) & "         " & Lpad(unidad4.Text, "0", 3) & "|"
+                End If
+            End If
+            coordenada = coordenada + 30
+            If ((tipot.Text = "C") Or (tipot.Text = "G")) Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            UNADAS      FECHA CORTE      EQUIVALENCIA|"
+                'MsgBox(detalle.Text.Length / 12)
+                corte = (detallet.Text.Length / 35)
+                salto = 1
+                LecturaF.Text = 0
+                'MsgBox(corte)
+                total_detalle = 0
+                While salto <= corte
+                    linea = ""
+                    coordenada = coordenada + 30
+                    linea = detallet.Text.Substring(LecturaF.Text * 35, 35)
+                    'MsgBox("linea: " & linea)
+                    'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "    " & linea.Substring(3, 3) & "        " & linea.Substring(6, 6) & "  " & linea.Substring(29, 6) & "         " & linea.Substring(12, 3) & "      " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "       " & linea.Substring(23, 6) & "|"
+                    total_detalle = total_detalle + Convert.ToInt32(linea.Substring(12, 3))
+                    If ((salto = 25) Or (salto = 50)) Then
+                        IMP &= "}" & "{AHEAD:0}" & "{LP}"
+                        BTPRINT.Write(IMP)
+                        IMP = Chr(27) & "EZ" & "{PRINT: "
+                        coordenada = 0
+                    End If
+                    salto = salto + 1
+                    LecturaF.Text = LecturaF.Text + 1
+
+                End While
+                ''temporal erick''
+                'If trato.Checked = True Then
+                '    coordenada = coordenada + 30
+                '    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |                                                  " & Lpad(fecha_corte.Text.Substring(0, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(2, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(4, 4), "0", 4) & "             |"
+                'End If
+                ''
+            ElseIf (tipot.Text = "L") Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            QUINTALES      FECHA CORTE      EQUIVALENCIA|"
+                'MsgBox(detalle.Text.Length / 12)
+                corte = (detallet.Text.Length / 35)
+                salto = 1
+                LecturaF.Text = 0
+                'MsgBox(corte)
+                total_detalle = 0
+                While salto <= corte
+                    linea = ""
+                    coordenada = coordenada + 30
+                    linea = detallet.Text.Substring(LecturaF.Text * 35, 35)
+                    'MsgBox("linea: " & linea)
+                    'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "    " & linea.Substring(3, 3) & "        " & linea.Substring(6, 6) & "  " & linea.Substring(29, 6) & "         " & linea.Substring(12, 3) & "      " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "       " & linea.Substring(23, 6) & "|"
+                    total_detalle = total_detalle + Convert.ToInt32(linea.Substring(12, 3))
+                    If ((salto = 25) Or (salto = 50)) Then
+                        IMP &= "}" & "{AHEAD:0}" & "{LP}"
+                        BTPRINT.Write(IMP)
+                        IMP = Chr(27) & "EZ" & "{PRINT: "
+                        coordenada = 0
+                    End If
+                    salto = salto + 1
+                    LecturaF.Text = LecturaF.Text + 1
+
+                End While
+                ''temporal erick''
+                'If trato.Checked = True Then
+                '    coordenada = coordenada + 30
+                '    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |                                                  " & Lpad(fecha_corte.Text.Substring(0, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(2, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(4, 4), "0", 4) & "             |"
+                'End If
+                ''
+            ElseIf ((tipot.Text = "T") Or (tipot.Text = "T")) Then
+                If tipot.Text = "T" Then
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      EQUIVALENCIA      FECHA CORTE|"
+                    'MsgBox(detalle.Text.Length / 12)
+                    corte = (detallet.Text.Length / 20)
+                    salto = 1
+                    LecturaF.Text = 0
+                    'MsgBox(corte)
+                    While salto <= corte
+                        linea = ""
+                        coordenada = coordenada + 30
+                        linea = detallet.Text.Substring(LecturaF.Text * 20, 20)
+                        'MsgBox("linea: " & linea)
+                        'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "        " & linea.Substring(6, 6) & "            " & linea.Substring(12, 2) & "/" & linea.Substring(14, 2) & "/" & linea.Substring(16, 4) & "|"
+                        salto = salto + 1
+                        LecturaF.Text = LecturaF.Text + 1
+                    End While
+                    ''temporal erick''
+                    'If trato.Checked = True Then
+                    '    coordenada = coordenada + 30
+                    '    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |                                " & Lpad(fecha_corte.Text.Substring(0, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(2, 2), "0", 2) & "/" & Lpad(fecha_corte.Text.Substring(4, 4), "0", 4) & "|"
+                    'End If
+                    ''
+                End If
+                total_detalle = total_unidades
+            ElseIf (tipot.Text = "M") Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADORA      TRACTOR      CARRETAS      O. CORTADORA      O. TRACTOR|"
+                'MsgBox(detalle.Text.Length / 12)
+                corte = (detallet.Text.Length / 21)
+                salto = 1
+                LecturaF.Text = 0
+                'MsgBox(corte)
+                total_detalle = 0
+                While salto <= corte
+                    linea = ""
+                    coordenada = coordenada + 30
+                    linea = detallet.Text.Substring(LecturaF.Text * 21, 21)
+                    'MsgBox("linea: " & linea)
+                    'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "            " & linea.Substring(3, 3) & "           " & linea.Substring(6, 3) & "           " & linea.Substring(9, 6) & "           " & linea.Substring(15, 6) & "|"
+                    ' total_detalle = total_detalle + Convert.ToInt32(linea.Substring(6, 3))
+                    salto = salto + 1
+                    LecturaF.Text = LecturaF.Text + 1
+                End While
+                total_detalle = total_unidades
+            ElseIf (tipot.Text = "U") Then
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      CANASTAS |"
+                'MsgBox(detalle.Text.Length / 12)
+                corte = (detallet.Text.Length / 9)
+                salto = 1
+                LecturaF.Text = 0
+                'MsgBox(corte)
+                total_detalle = 0
+                While salto <= corte
+                    linea = ""
+                    coordenada = coordenada + 30
+                    linea = detallet.Text.Substring(LecturaF.Text * 9, 9)
+                    'MsgBox("linea: " & linea)
+                    'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "            " & linea.Substring(6, 3) & "|"
+                    total_detalle = total_detalle + Convert.ToInt32(linea.Substring(6, 3))
+                    salto = salto + 1
+                    LecturaF.Text = LecturaF.Text + 1
+                End While
+            ElseIf (tipot.Text = "V") Then
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      CANASTAS |"
+                'MsgBox(detalle.Text.Length / 12)
+                corte = (detallet.Text.Length / 12)
+                salto = 1
+                LecturaF.Text = 0
+                'MsgBox(corte)
+                total_detalle = 0
+                While salto <= corte
+                    linea = ""
+                    'coordenada = coordenada + 30
+                    linea = detallet.Text.Substring(LecturaF.Text * 12, 12)
+                    'MsgBox("linea: " & linea)
+                    'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "            " & linea.Substring(6, 3) & "|"
+                    total_detalle = total_detalle + Convert.ToInt32(linea.Substring(6, 3))
+                    TOTAL_SACOS = TOTAL_SACOS + Convert.ToInt32(linea.Substring(9, 3))
+                    salto = salto + 1
+                    LecturaF.Text = LecturaF.Text + 1
+                End While
+            End If
+            If tipot.Text = "M" Then
+                coordenada = coordenada + 50
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & cortadores.Text & " |"
+            ElseIf tipot.Text = "L" Then
+                coordenada = coordenada + 50
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & unidad.Text & " |"
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL QUINTALES:  " & total_detalle & " |"
+                coordenada = coordenada + 30
+                total_tonelada = total_detalle / 20
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL TONELADAS:  " & total_tonelada & " |"
+            Else
+                coordenada = coordenada + 50
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & total_detalle & " |"
+            End If
+            If tipot.Text = "V" Then
+                coordenada = coordenada + 50
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL SACOS: " & TOTAL_SACOS & " |"
+            End If
+            coordenada = coordenada + 30
+            IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ENVIERO:      " & Lpad(usuario.Text, "0", 6) & " |"
+            If (tipot.Text = "L") Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TIPO:     " & texto & " |"
+            End If
+            If tipot.Text = "G" Or tipot.Text = "C" Or tipot.Text = "T" Then
+                coordenada = coordenada + 30
+                IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | TOTAL DE CORTADORES INGRESADOS : " & cortadores.Text & "|"
+            End If
+            If tipot.Text = "M" Then
+                Dim TOTAL_CARRETAS As Integer = 0
+                TOTAL_CARRETAS = Convert.ToInt32(cortadores.Text.Trim)
+            End If
+            coordenada = coordenada + 50
+            IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | IMPRESION NUMERO : ** PREVIA ** |"
+            coordenada = coordenada + 50
+            IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | UBICACION : " & txtLatitud.Text & ", " & txtLongitud.Text & ", " & txtResult.Text & "|"
+            coordenada = coordenada + 50
+
+            IMP &= "}" & "{AHEAD:125}" & "{LP}"
+            BTPRINT.Write(IMP)
+            BTPRINT.Close()
         Catch ex As Exception
-            Console.Write(ex.StackTrace)
+            MsgBox("Error ocacionado por 18" & ex.Message & vbCrLf & "Favor de Reportarlo.")
         End Try
+        IMPRESIONPRE = IMPRESIONPRE + 1
+        
     End Sub
 
 
