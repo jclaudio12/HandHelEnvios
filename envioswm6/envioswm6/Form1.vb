@@ -8294,6 +8294,19 @@ Public Class Form1
 
     Private Sub f_imp_previa(ByVal theBtMacAddress As [String])
         numero_reporte()
+        'Estructura para imprimir
+        Dim st = "! 0 200 200 200 1" 'Inicio de página a imprimir con CPCL
+        Dim body = "! 0 200 200 500 1" ' Inicio página a imprimir con CPCL BODY
+        Dim tp = "PAGE-WIDTH 600" 'Tamaño de la pagina a imprimir'
+        Dim ac = "CENTER" 'Aliniación centrada'
+        Dim af = "LEFT" 'Aliniación Izquierda
+        Dim sl = vbCrLf ' Salto de linea
+        Dim p = "PRINT" ' Imprimir la pagina CPCL
+
+
+        'Fin Estructura para Imprimir
+
+
         If ((tipot.Text = "G") Or (tipot.Text = "C")) Then
             cuenta_unadas()
         ElseIf ((tipot.Text = "M") Or (tipot.Text = "L")) Then
@@ -8484,117 +8497,154 @@ Public Class Form1
             'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
             If Empresa.Text = "6327" Then
                 ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
-
+                Dim pag = """! 0 200 200 300 1"" & vbCrLf & ""PAGE-WIDTH 300"" &"
+                ENC &= pag & """ vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6327"
             ElseIf Empresa.Text = "6326" Then
                 coordenada = coordenada + 70
                 ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
+                ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6326"
             Else
                 coordenada = coordenada + 70
                 ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                         SERIE: " & serie_preparada & "|"
+                ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA ULTIMA"
             End If
+
 
 
             Dim v_envio_no = Lpad(NUMERO_REP, "0", 6)
             fecha_env = Now.Date
             Dim v_id_finca = Lpad(Id_finca.Text, "0", 3)
-            'Impresion de los datos encabezado empresa, nota de envio, numero envio, serie, fecha y finca.
-            Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 300 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & fecha_env & vbCrLf & "T 5 0 1 160 FINCA: " & v_id_finca & vbCrLf & "T 5 0 200 160" & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
-            thePrinterConn.Write(encabezado, 0, encabezado.Length)
-
-
 
 
             If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CROQUIS:                 " + SerieCroquis.Text + "   " & Lpad(Croquis.Text, "0", 8) & "|" '"  " & nombre_trans & 
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ORDEN CORTE:             " & Lpad(ocorte.Text, "0", 8) & "|" '"  " & nombre_trans & 
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "|" '"  " & nombre_trans & 
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "|" '"  " & nombre_pilo &
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|" '"  " & placa_vehi &
-                Dim seccion_1 As Byte() = Encoding.[Default].GetBytes("! 0 200 200 200 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "LEFT" & "T 5 0 1 190 CROQUIS: " & vbCrLf & "PRINT" & vbCrLf)
-                thePrinterConn.Write(seccion_1, 0, seccion_1.Length)
-                Thread.Sleep(500)
-                thePrinterConn.Close()
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CROQUIS:                 " + SerieCroquis.Text + "   " & Lpad(Croquis.Text, "0", 8) & "|" '"  " & nombre_trans & 
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ORDEN CORTE:             " & Lpad(ocorte.Text, "0", 8) & "|" '"  " & nombre_trans & 
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "|" '"  " & nombre_trans & 
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "|" '"  " & nombre_pilo &
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|" '"  " & placa_vehi &
+                IMP &= "T 5 0 1 10 CROQUIS: " & Lpad(Croquis.Text, "0", 8) & sl & "T 5 0 1 40 ORDEN CORTE: " & Lpad(ocorte.Text, "0", 8) & sl & "T 5 0 1 70 TRANSPORTISTA: " & Lpad(trans.Text, "0", 4) & sl
+                IMP &= "T 5 0 1 100 PILOTO: " & Lpad(pilo.Text, "0", 3) & sl
+                IMP &= "T 5 0 1 130 VEHICULO: " & Lpad(vehi.Text, "0", 3) & sl & "T 5 0 300 130 PLACA: " & p_placa & sl
             Else
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "  " & nombre_trans & "|"
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TRANSPORTISTA:           " & Lpad(trans.Text, "0", 4) & "  " & nombre_trans & "|"
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "  " & nombre_pilo & "|" '
                 coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PILOTO:                  " & Lpad(pilo.Text, "0", 3) & "  " & nombre_pilo & "|" '
-                coordenada = coordenada + 30
+                IMP &= "T 5 0 1 70 TRANSPORTISTA: " & Lpad(trans.Text, "0", 4) & sl
+                IMP &= "T 5 0 1 100 PILOTO: " & Lpad(pilo.Text, "0", 3) & sl
                 If (tipot.Text = "T" Or tipot.Text = "L") Then
                     If (p_placa.Length > 1) Then
-                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + p_placa + "|"
+                        'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + p_placa + "|"
+                        IMP &= "T 5 0 1 130 VEHICULO: " & Lpad(vehi.Text, "0", 3) & sl & "T 5 0 300 130 PLACA: " & placa_vehi & sl
                     Else
-                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + txtPLaca.Text + "|"
+                        'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "      Placas:  " + txtPLaca.Text + "|"
+                        IMP &= "T 5 0 1 130 VEHICULO: " & Lpad(vehi.Text, "0", 3) & sl & "T 5 0 300 130 PLACA: " & txtPLaca.Text & sl
                     End If
                 Else
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|"
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |VEHICULO:                " & Lpad(vehi.Text, "0", 3) & "|"
+                    IMP &= "T 5 0 1 130 VEHICULO: " & Lpad(vehi.Text, "0", 3) & sl
                 End If
+
                 coordenada = coordenada + 30
+
                 If ((tipot.Text = "T") Or (tipot.Text = "L")) Then
                     If (Manual.CheckState = Windows.Forms.CheckState.Checked) Then
                         IMP &= "@" & coordenada & ",50:MF204, VMULT1 |Placa Manual |"
+                        IMP &= "T 5 0 300 130 PLACA MANUAL" & sl
                     Else
-                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |STICKER |"
+                        'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |STICKER |"
+                        IMP &= "T 5 0 300 160 STICKER"
                     End If
                 End If
             End If
+
+
             If (tipot.Text <> "U") And (tipot.Text <> "V") Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204,VMULT1 |FRENTE:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204,VMULT1 |FRENTE:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+                IMP &= "T 5 0 1 190 FRENTE: " & Lpad(Id_Frente.Text, "0", 3) & sl
                 If (tipot.Text <> "T") Then
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BOLETA DE TRANSPORTE:    " & Lpad(Nboleta.Text, "0", 6) & "|"
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BOLETA DE TRANSPORTE:    " & Lpad(Nboleta.Text, "0", 6) & "|"
+                    IMP &= "T 5 0 1 210 BOLETA DE TRANSPORTE: " & Lpad(Nboleta.Text, "0", 6) & sl
                 End If
             Else
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204,VMULT1 |SECTOR:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+                ' coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204,VMULT1 |SECTOR:                  " & Lpad(Id_Frente.Text, "0", 3) & "|"
+                IMP &= "T 5 0 1 240 SECTO: " & Lpad(Id_Frente.Text, "0", 3) & sl
             End If
             If (tipot.Text <> "U") And (tipot.Text <> "V") Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |RUTA:                    " & Lpad(id_ruta.Text, "0", 3) & "|"
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |RUTA:                    " & Lpad(id_ruta.Text, "0", 3) & "|"
+                IMP &= "T 5 0 1 270 RUTA: " & Lpad(id_ruta.Text, "0", 3) & sl
             End If
             If (tipot.Text <> "T") Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PLATAFORMA:              " & Lpad(plata.Text, "0", 4) & "|"
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PLATAFORMA:              " & Lpad(plata.Text, "0", 4) & "|"
+                IMP &= "T 5 0 1 300 PLATAFORMA: " & Lpad(plata.Text, "0", 4) & sl
             End If
             If ((tipot.Text = "C") Or (tipot.Text = "G") Or (tipot.Text = "M") Or (tipot.Text = "L")) Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |COLERA:                  " & Lpad(cole.Text, "0", 4) & "|"
+                'coordenada = coordenada + 30
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |COLERA:                  " & Lpad(cole.Text, "0", 4) & "|"
+                IMP &= "T 5 0 1 330 COLERA: " & Lpad(cole.Text, "0", 4) & sl
             End If
             If ((tipot.Text <> "M") And (tipot.Text <> "T") And (tipot.Text <> "L")) Then
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(contraid.Text, "0", 4) & sl
                 Else
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(contraid.Text, "0", 4) & Contratista.Text & sl
                 End If
             End If
             If (tipot.Text = "T") Then
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & sl
                 Else
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & " " & Contratista.Text & sl
                 End If
             End If
             If (tipot.Text = "L") Then
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & sl
                 Else
-                    coordenada = coordenada + 30
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    'coordenada = coordenada + 30
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
+                    IMP &= "T 5 0 1 360 CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & " " & Contratista.Text & sl
                 End If
             End If
-            coordenada = coordenada + 30
-            IMP &= "@" & coordenada & ",50:MF204, VMULT1 |HORA DE DESPACHO:        " & TimeOfDay.ToString("HH:mm") & "|"
+            '--coordenada = coordenada + 30
+            '--IMP &= "@" & coordenada & ",50:MF204, VMULT1 |HORA DE DESPACHO:        " & TimeOfDay.ToString("HH:mm") & "|"
             'If (tipo <> "U") Then
-            coordenada = coordenada + 30
+            '--coordenada = coordenada + 30
+            IMP &= "T 5 0 1 390 HORA DESPACHO: " & TimeOfDay.ToString("HH:mm") & sl
+
+            Dim encab = st & sl & tp & sl & ac & sl & "T 4 0 1 10" & nombre_empresa & sl & "T 5 0 1 55" & NOMBRE_BOLETA & sl & af & sl & "T 5 0 1 100 ENVIO: " & v_envio_no & sl & "T 5 0 300 100 SERIE: " & serie_preparada & sl & "T 5 0 1 130 FECHA: " & fecha_env & sl & "T 5 0 1 160 FINCA: " & v_id_finca & sl & "T 5 0 200 160" & Nombre_finca.Text & sl & p & sl
+            'Impresion de los datos encabezado empresa, nota de envio, numero envio, serie, fecha y finca.
+            'Dim encabezado As Byte() = Encoding.[Default].GetBytes("! 0 200 200 300 1" & vbCrLf & "PAGE-WIDTH 600" & vbCrLf & "CENTER" & vbCrLf & "T 4 0 1 10" & nombre_empresa & vbCrLf & "T 5 0 1 55" & NOMBRE_BOLETA & vbCrLf & "LEFT" & vbCrLf & "T 5 0 1 100 ENVIO: " & v_envio_no & vbCrLf & "T 5 0 300 100 SERIE: " & serie_preparada & vbCrLf & "T 5 0 1 130 FECHA: " & fecha_env & vbCrLf & "T 5 0 1 160 FINCA: " & v_id_finca & vbCrLf & "T 5 0 200 160" & Nombre_finca.Text & vbCrLf & "PRINT" & vbCrLf)
+            Dim encabezado As Byte() = Encoding.[Default].GetBytes(encab)
+            thePrinterConn.Write(encabezado, 0, encabezado.Length)
+
+            Dim imp_body = body & sl & tp & sl & af & sl & IMP & sl & p & sl
+            Dim cuerpo As Byte() = Encoding.[Default].GetBytes(imp_body)
+            thePrinterConn.Write(cuerpo, 0, cuerpo.Length)
+            Thread.Sleep(500)
+            ' Close the connection to release resources.
+            thePrinterConn.Close()
+
+
             If (tipot.Text <> "U") And (tipot.Text <> "T") And (tipot.Text <> "V") Then
                 IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TURNO:                   " & grupo.Text & "|"
             ElseIf tipot.Text = "T" Then
