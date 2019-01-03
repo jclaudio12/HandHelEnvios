@@ -8296,7 +8296,7 @@ Public Class Form1
     Private Sub f_imp_previa(ByVal theBtMacAddress As [String])
         numero_reporte()
         'Estructura para imprimir
-        Dim header = "! 0 200 200 100 1" 'Inicio de página a imprimir con CPCL
+        Dim header = "! 0 200 200 85 1" 'Inicio de página a imprimir con CPCL
         Dim a = "!"
         Dim b = 0
         Dim c = 200
@@ -8514,7 +8514,7 @@ Public Class Form1
 
             'ENC = Chr(27) & "EZ" & "{PRINT:" & "@" & coordenada & ",250:MF107,VMULT2|" & nombre_empresa & "|"
             ENC = t & es & tl4 & es & tml & es & px & es & py & es & nombre_empresa & sl
-            py = py + 70
+            py = py + 45
             'coordenada = coordenada + 70
             'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
             ENC &= t & es & tl5 & es & tml & es & px & es & py & es & NOMBRE_BOLETA & sl
@@ -8522,17 +8522,19 @@ Public Class Form1
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
                 'Dim pag = """! 0 200 200 300 1"" & vbCrLf & ""PAGE-WIDTH 300"" &"
                 'ENC &= pag & """ vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6327"
-                py = 20
+                py = 15
+                px = px + 299
                 ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
             ElseIf Empresa.Text = "6326" Then
                 'coordenada = coordenada + 70
-                py = 20
+                py = 15
+                px = px + 299
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
                 'ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6326"
                 ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
             Else
                 'coordenada = coordenada + 70
-                py = 20
+                py = 15
                 px = px + 299
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                         SERIE: " & serie_preparada & "|"
                 'ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA ULTIMA"
@@ -8560,7 +8562,7 @@ Public Class Form1
                 px = 1
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TRANSP: " & Lpad(trans.Text, "0", 4) & sl
                 py = py + sto
-                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "PILOTO: " & Lpad(Piloto.Text, "0", 3) & sl
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "PILOTO: " & Lpad(Id_piloto.Text, "0", 3) & sl
                 py = py + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "VEHICULO: " & Lpad(vehi.Text, "0", 3) & sl
                 px = px + 299
@@ -8652,12 +8654,12 @@ Public Class Form1
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "|" ' "  " & nombre_contra &
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(contraid.Text, "0", 4) & sl
                 Else
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(contraid.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(contraid.Text, "0", 4) & Contratista.Text & sl
                 End If
             End If
@@ -8665,12 +8667,12 @@ Public Class Form1
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & sl
                 Else
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & " " & Contratista.Text & sl
                 End If
             End If
@@ -8678,12 +8680,12 @@ Public Class Form1
                 If ((tipot.Text <> "U") And (tipot.Text <> "V")) Then
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "|" ' "  " & nombre_contra &
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & sl
                 Else
                     'coordenada = coordenada + 30
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CONTRATISTA:             " & Lpad(id_contratista.Text, "0", 4) & "  " & Contratista.Text & "|" ' 
-                    py = py + sto
+                    'py = py + sto
                     IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CONTRATISTA: " & Lpad(id_contratista.Text, "0", 4) & " " & Contratista.Text & sl
                 End If
             End If
