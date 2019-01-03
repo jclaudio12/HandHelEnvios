@@ -8782,16 +8782,16 @@ Public Class Form1
             If (tipot.Text <> "U") And (tipot.Text <> "V") Then
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PRESENTACION:                 " & Lpad(presentacion, "0", 1) & "|"
-                py = py + sto
+                py = py + sto + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "PRESENTACION: " & Lpad(presentacion, "0", 1) & sl
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |     LOTE           FECH QUEMA      HORA QUEMA      " & unidades.Text & "|"
-                py = py + sto
+                py = py + sto + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "  LOTE      FECHA QUEMA    HORA QUEMA   " & unidades.Text & sl
             Else
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BLOQUE    VARIEDAD  FECH CORTE      HORA CORTE      " & unidades.Text & "|"
-                py = py + sto
+                py = py + sto + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "  BLOQUE  VARIEDAD  FECH CORTE HORA CORTE  " & unidades.Text & sl
             End If
 
@@ -8949,7 +8949,7 @@ Public Class Form1
             py = py + sto
             If ((tipot.Text = "C") Or (tipot.Text = "G")) Then
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            UNADAS      FECHA CORTE      EQUIVALENCIA|"
-                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "F   POS   CORTAD   UÑD FECH CORTE  EQUIV" & sl
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "F   POS   CORTADOR   UÑD  FECH CORTE   EQUIVA" & sl
                 'MsgBox(detalle.Text.Length / 12)
                 corte = (detallet.Text.Length / 35)
                 salto = 1
