@@ -8297,7 +8297,13 @@ Public Class Form1
         numero_reporte()
         'Estructura para imprimir
         Dim header = "! 0 200 200 100 1" 'Inicio de página a imprimir con CPCL
-        Dim body = "! 0 200 200 700 1" ' Inicio página a imprimir con CPCL BODY
+        Dim a = "!"
+        Dim b = 0
+        Dim c = 200
+        Dim d = 200
+        Dim e = 500
+        Dim f = 1
+        'Dim body = "! 0 200 200 700 1" ' Inicio página a imprimir con CPCL BODY
         Dim tp = "PAGE-WIDTH 600" 'Tamaño de la pagina a imprimir'
         Dim ac = "CENTER" 'Aliniación centrada'
         Dim af = "LEFT" 'Aliniación Izquierda
@@ -8313,6 +8319,7 @@ Public Class Form1
         Dim es = " " 'Espacio
         Dim sto = 25 ' espacio entre linea y
         Dim pxc = 300 'centro de pagina
+
 
 
         'Fin Estructura para Imprimir
@@ -8474,32 +8481,32 @@ Public Class Form1
                 End If
             End If
             If tipot.Text = "L" And cole_mal.Text.Length >= "1" Then
-                NOMBRE_BOLETA = "NOTA DE ENVIO DE CAÑA MALETEADA (COLERA)"
+                NOMBRE_BOLETA = "ENVIO DE CAÑA MALETEADA (COLERA)"
                 unidades.Text = "MALETAS"
             ElseIf tipot.Text = "M" And cole_meca.Text.Length >= "1" Then
-                NOMBRE_BOLETA = "NOTA DE ENVIO DE CAÑA MECANIZADA(COLERA)"
+                NOMBRE_BOLETA = "ENVIO DE CAÑA MECANIZADA(COLERA)"
                 unidades.Text = "CARRETAS"
             Else
                 If tipot.Text = "C" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA A GRANEL (COLERA)"
+                    NOMBRE_BOLETA = "ENVIO DE CANA A GRANEL (COLERA)"
                     unidades.Text = "UNADAS"
                 ElseIf tipot.Text = "G" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA A GRANEL"
+                    NOMBRE_BOLETA = "ENVIO DE CANA A GRANEL"
                     unidades.Text = "UNADAS"
                 ElseIf tipot.Text = "M" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA COSECHA MECANIZADA"
+                    NOMBRE_BOLETA = "ENVIO DE CANA COSECHA MECANIZADA"
                     unidades.Text = "CARRETAS"
                 ElseIf tipot.Text = "L" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA MALETEADA"
+                    NOMBRE_BOLETA = "ENVIO DE CANA MALETEADA"
                     unidades.Text = "MALETAS"
                 ElseIf tipot.Text = "T" Then
                     NOMBRE_BOLETA = "NOTA DE ENVIO DE CANA TRAMEADO"
                     unidades.Text = "MALETAS"
                 ElseIf tipot.Text = "U" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE PALMA AFRICANA A FABRICA"
+                    NOMBRE_BOLETA = "ENVIO DE PALMA AFRICANA A FABRICA"
                     unidades.Text = "CANASTAS"
                 ElseIf tipot.Text = "V" Then
-                    NOMBRE_BOLETA = "NOTA DE ENVIO DE PALMA AFRICANA A VENTA"
+                    NOMBRE_BOLETA = "ENVIO DE PALMA AFRICANA A VENTA"
                     unidades.Text = "RACIMOS"
                 End If
             End If
@@ -8510,29 +8517,29 @@ Public Class Form1
             py = py + 70
             'coordenada = coordenada + 70
             'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & NOMBRE_BOLETA & "|"
-            ENC &= t & es & tl7 & es & tml & es & px & es & py & es & NOMBRE_BOLETA & sl
+            ENC &= t & es & tl5 & es & tml & es & px & es & py & es & NOMBRE_BOLETA & sl
             If Empresa.Text = "6327" Then
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
                 'Dim pag = """! 0 200 200 300 1"" & vbCrLf & ""PAGE-WIDTH 300"" &"
                 'ENC &= pag & """ vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6327"
                 py = 20
-                ENC1 &= t & es & tl7 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
+                ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
             ElseIf Empresa.Text = "6326" Then
                 'coordenada = coordenada + 70
                 py = 20
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                              SERIE: " & serie_preparada & "|"
                 'ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA 6326"
-                ENC1 &= t & es & tl7 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
+                ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
             Else
                 'coordenada = coordenada + 70
                 py = 20
                 px = px + 299
                 'ENC &= "@" & coordenada & ", 50:MF107, VMULT2|" & "                         SERIE: " & serie_preparada & "|"
                 'ENC = "& vbCrLf & ""CENTER"" & vbCrLf & ""T 5 0 1 10 EMPRESA ULTIMA"
-                ENC1 &= t & es & tl7 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
+                ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "SERIE: " & serie_preparada & sl
             End If
             px = 1
-            ENC1 &= t & es & tl7 & es & tml & es & px & es & py & es & "ENVIO NO.: " & Lpad(NUMERO_REP, "0", 6) & sl
+            ENC1 &= t & es & tl5 & es & tml & es & px & es & py & es & "ENVIO NO.: " & Lpad(NUMERO_REP, "0", 6) & sl
             py = py + sto
             ENC1 &= t & es & tl7 & es & tml & es & px & es & py & es & "FECHA: " & Now.ToString("dd/MM/yyyy HH:mm") & sl
             py = py + sto
@@ -8628,13 +8635,15 @@ Public Class Form1
             If (tipot.Text <> "T") Then
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PLATAFORMA:              " & Lpad(plata.Text, "0", 4) & "|"
-                py = py + sto
+                'py = py + sto
+                px = pxc
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "PLATAFORMA: " & Lpad(plata.Text, "0", 4) & sl
+                px = 1
             End If
             If ((tipot.Text = "C") Or (tipot.Text = "G") Or (tipot.Text = "M") Or (tipot.Text = "L")) Then
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |COLERA:                  " & Lpad(cole.Text, "0", 4) & "|"
-                'py = py + sto
+                py = py + sto
                 px = pxc
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "COLERA: " & Lpad(cole.Text, "0", 4) & sl
                 px = 1
@@ -8782,16 +8791,16 @@ Public Class Form1
             If (tipot.Text <> "U") And (tipot.Text <> "V") Then
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |PRESENTACION:                 " & Lpad(presentacion, "0", 1) & "|"
-                py = py + sto + sto
+                py = py + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "PRESENTACION: " & Lpad(presentacion, "0", 1) & sl
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |     LOTE           FECH QUEMA      HORA QUEMA      " & unidades.Text & "|"
-                py = py + sto + sto
+                py = py + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "  LOTE      FECHA QUEMA    HORA QUEMA   " & unidades.Text & sl
             Else
                 'coordenada = coordenada + 30
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |BLOQUE    VARIEDAD  FECH CORTE      HORA CORTE      " & unidades.Text & "|"
-                py = py + sto + sto
+                py = py + sto
                 IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "  BLOQUE  VARIEDAD  FECH CORTE HORA CORTE  " & unidades.Text & sl
             End If
 
@@ -8946,10 +8955,10 @@ Public Class Form1
             End If
 
             'coordenada = coordenada + sto
-            py = py + sto
+            py = py + sto + sto
             If ((tipot.Text = "C") Or (tipot.Text = "G")) Then
                 'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            UNADAS      FECHA CORTE      EQUIVALENCIA|"
-                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "F   POS   CORTADOR   UÑD  FECH CORTE   EQUIVA" & sl
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "FIL POS   CORTADOR    UÑD FECH CORTE   EQUIVA" & sl
                 'MsgBox(detalle.Text.Length / 12)
                 corte = (detallet.Text.Length / 35)
                 salto = 1
@@ -8958,15 +8967,16 @@ Public Class Form1
                 total_detalle = 0
                 While salto <= corte
                     linea = ""
+                    e = e + sto
                     'coordenada = coordenada + sto
                     py = py + sto
                     linea = detallet.Text.Substring(LecturaF.Text * 35, 35)
                     'MsgBox("linea: " & linea)
                     'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
                     'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "    " & linea.Substring(3, 3) & "        " & linea.Substring(6, 6) & "  " & linea.Substring(29, 6) & "         " & linea.Substring(12, 3) & "      " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "       " & linea.Substring(23, 6) & "|"
-                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 3) & " " & linea.Substring(3, 3) & " " & linea.Substring(6, 6) & " " & linea.Substring(29, 6) & " " & linea.Substring(12, 3) & " " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & " " & linea.Substring(23, 6) & sl
+                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 3) & " " & linea.Substring(3, 3) & " " & linea.Substring(6, 6) & " " & linea.Substring(29, 6) & " " & linea.Substring(12, 3) & " " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "   " & linea.Substring(23, 6) & sl
                     total_detalle = total_detalle + Convert.ToInt32(linea.Substring(12, 3))
-                    If ((salto = sto) Or (salto = 50)) Then
+                    If ((salto = 30) Or (salto = 50)) Then
                         IMP &= "}" & "{AHEAD:0}" & "{LP}"
                         BTPRINT.Write(IMP)
                         IMP = Chr(27) & "EZ" & "{PRINT: "
@@ -8974,7 +8984,6 @@ Public Class Form1
                     End If
                     salto = salto + 1
                     LecturaF.Text = LecturaF.Text + 1
-
                 End While
                 ''temporal erick''
                 'If trato.Checked = True Then
@@ -8983,8 +8992,9 @@ Public Class Form1
                 'End If
                 ''
             ElseIf (tipot.Text = "L") Then
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            QUINTALES      FECHA CORTE      EQUIVALENCIA|"
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |FILA   POSICION   CORTADOR            QUINTALES      FECHA CORTE      EQUIVALENCIA|"
                 'MsgBox(detalle.Text.Length / 12)
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "FIL POS   CORTADOR    QQ. FECH CORTE   EQUIVA" & sl
                 corte = (detallet.Text.Length / 35)
                 salto = 1
                 LecturaF.Text = 0
@@ -8992,13 +9002,16 @@ Public Class Form1
                 total_detalle = 0
                 While salto <= corte
                     linea = ""
-                    coordenada = coordenada + 30
+                    e = e + sto
+                    'coordenada = coordenada + 30
+                    py = py + sto
                     linea = detallet.Text.Substring(LecturaF.Text * 35, 35)
                     'MsgBox("linea: " & linea)
                     'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "    " & linea.Substring(3, 3) & "        " & linea.Substring(6, 6) & "  " & linea.Substring(29, 6) & "         " & linea.Substring(12, 3) & "      " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "       " & linea.Substring(23, 6) & "|"
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & " " & linea.Substring(3, 3) & " " & linea.Substring(6, 6) & " " & linea.Substring(29, 6) & " " & linea.Substring(12, 3) & " " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "   " & linea.Substring(23, 6) & "|"
+                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 3) & " " & linea.Substring(3, 3) & " " & linea.Substring(6, 6) & " " & linea.Substring(29, 6) & " " & linea.Substring(12, 3) & " " & linea.Substring(15, 2) & "/" & linea.Substring(17, 2) & "/" & linea.Substring(19, 4) & "   " & linea.Substring(23, 6) & sl
                     total_detalle = total_detalle + Convert.ToInt32(linea.Substring(12, 3))
-                    If ((salto = sto) Or (salto = 50)) Then
+                    If ((salto = 30) Or (salto = 50)) Then
                         IMP &= "}" & "{AHEAD:0}" & "{LP}"
                         BTPRINT.Write(IMP)
                         IMP = Chr(27) & "EZ" & "{PRINT: "
@@ -9016,7 +9029,8 @@ Public Class Form1
                 ''
             ElseIf ((tipot.Text = "T") Or (tipot.Text = "T")) Then
                 If tipot.Text = "T" Then
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      EQUIVALENCIA      FECHA CORTE|"
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      EQUIVALENCIA      FECHA CORTE|"
+                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CORTADO     EQUIVALENCIA     FECHA CORTE" & sl
                     'MsgBox(detalle.Text.Length / 12)
                     corte = (detallet.Text.Length / 20)
                     salto = 1
@@ -9024,11 +9038,14 @@ Public Class Form1
                     'MsgBox(corte)
                     While salto <= corte
                         linea = ""
-                        coordenada = coordenada + 30
+                        'coordenada = coordenada + 30
+                        e = e + sto
+                        py = py + sto
                         linea = detallet.Text.Substring(LecturaF.Text * 20, 20)
                         'MsgBox("linea: " & linea)
                         'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
-                        IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "        " & linea.Substring(6, 6) & "            " & linea.Substring(12, 2) & "/" & linea.Substring(14, 2) & "/" & linea.Substring(16, 4) & "|"
+                        'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "        " & linea.Substring(6, 6) & "            " & linea.Substring(12, 2) & "/" & linea.Substring(14, 2) & "/" & linea.Substring(16, 4) & "|"
+                        IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 6) & "        " & linea.Substring(6, 6) & "            " & linea.Substring(12, 2) & "/" & linea.Substring(14, 2) & "/" & linea.Substring(16, 4) & sl
                         salto = salto + 1
                         LecturaF.Text = LecturaF.Text + 1
                     End While
@@ -9041,7 +9058,8 @@ Public Class Form1
                 End If
                 total_detalle = total_unidades
             ElseIf (tipot.Text = "M") Then
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADORA      TRACTOR      CARRETAS      O. CORTADORA      O. TRACTOR|"
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADORA      TRACTOR      CARRETAS      O. CORTADORA      O. TRACTOR|"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CORTADORA      TRACTOR      CARRETAS      O. CORTADORA      O. TRACTOR" & sl
                 'MsgBox(detalle.Text.Length / 12)
                 corte = (detallet.Text.Length / 21)
                 salto = 1
@@ -9050,18 +9068,22 @@ Public Class Form1
                 total_detalle = 0
                 While salto <= corte
                     linea = ""
-                    coordenada = coordenada + 30
+                    'coordenada = coordenada + 30
+                    e = e + sto
+                    py = py + sto
                     linea = detallet.Text.Substring(LecturaF.Text * 21, 21)
                     'MsgBox("linea: " & linea)
                     'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "            " & linea.Substring(3, 3) & "           " & linea.Substring(6, 3) & "           " & linea.Substring(9, 6) & "           " & linea.Substring(15, 6) & "|"
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 3) & "            " & linea.Substring(3, 3) & "           " & linea.Substring(6, 3) & "           " & linea.Substring(9, 6) & "           " & linea.Substring(15, 6) & "|"
+                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 3) & "            " & linea.Substring(3, 3) & "           " & linea.Substring(6, 3) & "           " & linea.Substring(9, 6) & "           " & linea.Substring(15, 6) & sl
                     ' total_detalle = total_detalle + Convert.ToInt32(linea.Substring(6, 3))
                     salto = salto + 1
                     LecturaF.Text = LecturaF.Text + 1
                 End While
                 total_detalle = total_unidades
             ElseIf (tipot.Text = "U") Then
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      CANASTAS |"
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |CORTADOR      CANASTAS |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "CORTADOR     CANASTAS" & sl
                 'MsgBox(detalle.Text.Length / 12)
                 corte = (detallet.Text.Length / 9)
                 salto = 1
@@ -9070,11 +9092,14 @@ Public Class Form1
                 total_detalle = 0
                 While salto <= corte
                     linea = ""
-                    coordenada = coordenada + 30
+                    'coordenada = coordenada + 30
+                    e = e + sto
+                    py = py + sto
                     linea = detallet.Text.Substring(LecturaF.Text * 9, 9)
                     'MsgBox("linea: " & linea)
                     'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
-                    IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "            " & linea.Substring(6, 3) & "|"
+                    'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |" & linea.Substring(0, 6) & "            " & linea.Substring(6, 3) & "|"
+                    IMP &= t & es & tl7 & es & tml & es & px & es & py & es & linea.Substring(0, 6) & "            " & linea.Substring(6, 3) & sl
                     total_detalle = total_detalle + Convert.ToInt32(linea.Substring(6, 3))
                     salto = salto + 1
                     LecturaF.Text = LecturaF.Text + 1
@@ -9090,6 +9115,7 @@ Public Class Form1
                 While salto <= corte
                     linea = ""
                     'coordenada = coordenada + 30
+                    e = e + sto
                     linea = detallet.Text.Substring(LecturaF.Text * 12, 12)
                     'MsgBox("linea: " & linea)
                     'MsgBox(lectura * 12 & " posiciones " & (salto * 12))
@@ -9100,6 +9126,82 @@ Public Class Form1
                     LecturaF.Text = LecturaF.Text + 1
                 End While
             End If
+
+            If tipot.Text = "M" Then
+                'coordenada = coordenada + 50
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & cortadores.Text & " |"
+                e = e + sto
+                py = py + sto
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL " & unidades.Text & ": " & cortadores.Text & sl
+            ElseIf tipot.Text = "L" Then
+                'coordenada = coordenada + 50
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & unidad.Text & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL " & unidades.Text & ": " & unidad.Text & sl
+                'coordenada = coordenada + 30
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL QUINTALES:  " & total_detalle & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "QUINTALES " & total_detalle & sl
+                'coordenada = coordenada + 30
+                e = e + sto
+                py = py + sto
+                total_tonelada = total_detalle / 20
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL TONELADAS:  " & total_tonelada & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL TONELADAS " & total_tonelada & sl
+            Else
+                'coordenada = coordenada + 50
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & total_detalle & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL " & unidades.Text & ": " & total_detalle & sl
+            End If
+            If tipot.Text = "V" Then
+                'coordenada = coordenada + 50
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL SACOS: " & TOTAL_SACOS & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL SACOS " & TOTAL_SACOS & sl
+            End If
+            'coordenada = coordenada + 30
+            e = e + sto
+            py = py + sto
+            'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ENVIERO:      " & Lpad(usuario.Text, "0", 6) & " |"
+            IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "ENVIERO " & Lpad(usuario.Text, "0", 6) & sl
+            If (tipot.Text = "L") Then
+                'coordenada = coordenada + 30
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TIPO:     " & texto & " |"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TIPO " & texto & sl
+            End If
+            If tipot.Text = "G" Or tipot.Text = "C" Or tipot.Text = "T" Then
+                'coordenada = coordenada + 30
+                e = e + sto
+                py = py + sto
+                'IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | TOTAL DE CORTADORES INGRESADOS : " & cortadores.Text & "|"
+                IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "TOTAL DE CORTADORES INGRESADOS " & cortadores.Text & sl
+            End If
+            If tipot.Text = "M" Then
+                Dim TOTAL_CARRETAS As Integer = 0
+                TOTAL_CARRETAS = Convert.ToInt32(cortadores.Text.Trim)
+            End If
+            'coordenada = coordenada + 50
+            e = e + sto
+            py = py + sto
+            'IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | IMPRESION NUMERO : ** PREVIA ** |"
+            IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "IMPRESION NUMERO : ** PREVIA **" & sl
+            'coordenada = coordenada + 50
+            e = e + sto
+            py = py + sto
+            'IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | UBICACION : " & txtLatitud.Text & ", " & txtLongitud.Text & ", " & txtResult.Text & "|"
+            IMP &= t & es & tl7 & es & tml & es & px & es & py & es & "UBICACION: " & txtLatitud.Text & ", " & txtLongitud.Text & ", " & txtResult.Text & sl
+            'coordenada = coordenada + 50
+            IMP &= "}" & "{AHEAD:125}" & "{LP}"
+            'BTPRINT.Write(IMP)
+            'BTPRINT.Close()
+
 
             'Dim encab = header & sl & tp & sl & ac & sl & "T 4 0 1 10" & nombre_empresa & sl & "T 5 0 1 55" & NOMBRE_BOLETA & sl & af & sl & "T 5 0 1 100 ENVIO: " & v_envio_no & sl & "T 5 0 300 100 SERIE: " & serie_preparada & sl & "T 5 0 1 130 FECHA: " & fecha_env & sl & "T 5 0 1 160 FINCA: " & v_id_finca & sl & "T 5 0 200 160" & Nombre_finca.Text & sl & p & sl
             'Impresion de los datos encabezado empresa, nota de envio, numero envio, serie, fecha y finca.
@@ -9115,6 +9217,7 @@ Public Class Form1
             Dim encabezado1 As Byte() = Encoding.[Default].GetBytes(encab2)
             thePrinterConn.Write(encabezado1, 0, encabezado1.Length)
 
+            Dim body = a & es & b & es & c & es & d & es & e & es & f
             Dim imp_body = body & sl & tp & sl & af & sl & IMP & sl & p & sl
             Dim cuerpo As Byte() = Encoding.[Default].GetBytes(imp_body)
             thePrinterConn.Write(cuerpo, 0, cuerpo.Length)
@@ -9123,48 +9226,6 @@ Public Class Form1
 
 
 
-            If tipot.Text = "M" Then
-                coordenada = coordenada + 50
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & cortadores.Text & " |"
-            ElseIf tipot.Text = "L" Then
-                coordenada = coordenada + 50
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & unidad.Text & " |"
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL QUINTALES:  " & total_detalle & " |"
-                coordenada = coordenada + 30
-                total_tonelada = total_detalle / 20
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL TONELADAS:  " & total_tonelada & " |"
-            Else
-                coordenada = coordenada + 50
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL " & unidades.Text & ": " & total_detalle & " |"
-            End If
-            If tipot.Text = "V" Then
-                coordenada = coordenada + 50
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TOTAL SACOS: " & TOTAL_SACOS & " |"
-            End If
-            coordenada = coordenada + 30
-            IMP &= "@" & coordenada & ",50:MF204, VMULT1 |ENVIERO:      " & Lpad(usuario.Text, "0", 6) & " |"
-            If (tipot.Text = "L") Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ",50:MF204, VMULT1 |TIPO:     " & texto & " |"
-            End If
-            If tipot.Text = "G" Or tipot.Text = "C" Or tipot.Text = "T" Then
-                coordenada = coordenada + 30
-                IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | TOTAL DE CORTADORES INGRESADOS : " & cortadores.Text & "|"
-            End If
-            If tipot.Text = "M" Then
-                Dim TOTAL_CARRETAS As Integer = 0
-                TOTAL_CARRETAS = Convert.ToInt32(cortadores.Text.Trim)
-            End If
-            coordenada = coordenada + 50
-            IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | IMPRESION NUMERO : ** PREVIA ** |"
-            coordenada = coordenada + 50
-            IMP &= "@" & coordenada & ", 50:MF204, VMULT1 | UBICACION : " & txtLatitud.Text & ", " & txtLongitud.Text & ", " & txtResult.Text & "|"
-            coordenada = coordenada + 50
-
-            IMP &= "}" & "{AHEAD:125}" & "{LP}"
-            BTPRINT.Write(IMP)
-            BTPRINT.Close()
         Catch ex As Exception
             MsgBox("Error ocacionado por 18" & ex.Message & vbCrLf & "Favor de Reportarlo.")
         End Try
